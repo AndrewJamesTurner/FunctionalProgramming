@@ -1,3 +1,4 @@
+
 // A comment!
 
 /* Another comment */
@@ -95,6 +96,7 @@ object MyModule {
 	}
 
 	def main(args: Array[String]): Unit = {
+	 
 		println(formatResult("Abs", -42, abs))
 		println(formatResult("Factorial", 5, factorial))
 		println(formatResult("Fibonacci", 6, fibonacci))
@@ -110,6 +112,9 @@ object MyModule {
 
 		if( isSorted(b, (x:Int, y:Int) => x>y) ) println("sorted")
 		else println("not sorted")
-			
+	
+	 
+	  
+	  
 	}
 }    
