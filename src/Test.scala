@@ -2,6 +2,7 @@ import fpinscala.datastructures._
 
 object Test extends App {
   val x = MyList(1,2,3,4,5)
+  val y = MyList(6,7,8,9)
   
   println(x)
   println(MyList.tail(x))
@@ -15,5 +16,7 @@ object Test extends App {
   
   println(MyList.dropWhile(x)( test) )
   println(MyList.setHead(x, 17))
+  
+  println(MyList.append(x, y))
   
 }  

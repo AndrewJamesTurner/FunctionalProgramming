@@ -44,6 +44,12 @@ object MyList {
     go(l, n)
   }
   
+  def append[A](a1: MyList[A], a2: MyList[A]): MyList[A] =
+    a1 match {
+    case Nil => a2
+    case Cons(h,t) => Cons(h, append(t, a2))
+  }
+  
  
   def dropWhile[A](l: MyList[A])(f: A => Boolean): MyList[A] = {
     
