@@ -19,4 +19,25 @@ object Test extends App {
   
   println(MyList.append(x, y))
   
+  println(MyList.length(x))
+  
+  //println(MyList.init(x))
+  
+  println(MyList.foldRight(MyList(1,2,3), Nil:MyList[Int])(Cons(_,_)))
+  
+  println(MyList.sum(x))
+  
+  println(x)
+  println(MyList.reverse(x))
+  
+  println(MyList.stringIfy(x))
+  
+  println(MyList.filter(x)(a => if(a%2 == 1) false else true))
+  
+  println(MyList.flatMap(MyList(1,2,3))(i => MyList(i,i)))
+  
+  
+  println(MyList.combine(MyList(3,2,1), MyList(1,2,3,17))((a,b) => a+b))
+  
+  
 }  
