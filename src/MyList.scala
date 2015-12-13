@@ -48,8 +48,8 @@ object MyList {
     foldRight(ds, 1.0)((a,b) => a * b)
   }
   
-  def head[A](ints: MyList[A]): A = ints match {
-   // case Nil => Nothing // don't know what to return
+  def head[A](ints: MyList[A]): A = (ints: @unchecked) match {
+    //case Nil => MyList[A]() // don't know what to return
     case Cons(x,xs) => x
   } 
       
@@ -104,9 +104,9 @@ object MyList {
     flatMap(l)((a) => if(f(a)) MyList(a) else MyList())
   }
   
-  def hasSubsequence[A](l: MyList[A], sub: MyList[A]): Boolean = {
+  /*def hasSubsequence[A](l: MyList[A], sub: MyList[A]): Boolean = {
     ???
-  }
+  }*/
   
   def combine[A](l1: MyList[A], l2: MyList[A])(f: (A,A) => A ): MyList[A] = {
      

@@ -6,7 +6,7 @@
 object MyModule {
 
 	def abs(n: Int): Int =
-		if (n < 0) -n
+		if (n < 0) -n 
 		else n
 
 	def factorial(n: Int): Int = {
